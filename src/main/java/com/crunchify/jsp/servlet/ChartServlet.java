@@ -64,7 +64,7 @@ public class ChartServlet extends HttpServlet {
         for (int i = 0; i < resultado.size(); i++) {
             String nom_Proy = (String) resultado.get(i);
             int total = (Integer) resultado.get(i + 1);
-            double porcentaje = total / sumatoria;
+            double porcentaje = (total/ sumatoria)*100;
             dataset.setValue(nom_Proy, porcentaje);
         }
 
