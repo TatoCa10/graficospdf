@@ -53,11 +53,9 @@ public class ChartServlet extends HttpServlet {
 
         ArrayList resultado = new ArrayList();
         DepartamentoDAO dao = new DepartamentoDAO();
-        try {
+        
             resultado = dao.consulta1();
-        } catch (SQLException ex) {
-            Logger.getLogger(ChartServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
         int sumatoria = 0;
         for (int i = 0; i < resultado.size(); i++) {
             sumatoria = (Integer) resultado.get(i + 1) + sumatoria;
